@@ -1,7 +1,7 @@
 import os
 import logging
 from typing import Dict, Any, Optional
-from model import SignLanguageTranslator
+from model_interface import SignLanguageTranslator
 
 # 로거 설정
 logger = logging.getLogger(__name__)
