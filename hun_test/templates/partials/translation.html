@@ -1,4 +1,4 @@
-<section id="translation-app" class="glass-container max-w-2xl w-full hidden relative fade-in" aria-label="수어 번역기">
+<section id="translation-app" class="glass-container max-w-2xl w-full hidden relative fade-in **h-full**" aria-label="수어 번역기">
 
     <!-- 스타일 css대신 -->
     <style>
@@ -139,7 +139,7 @@
     </div>
 
     <!-- 번역 3단계 결과 -->
-    <div id="step-3-content" class="step-content hidden">
+    <div id="step-3-content" class="step-content hidden **max-h-full overflow-y-auto p-1**">
         <!-- 결과 단어 -->
         <div class="text-center mb-8">
             <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm mb-3 inline-block">Translation Result</span>
@@ -155,27 +155,28 @@
             </div>
         </div>
 
-
-        <div class="flex justify-between items-center bg-slate-50/80 backdrop-blur-sm p-5 rounded-2xl border border-slate-100/80 mb-8 shadow-sm">
-            <div class="flex items-center gap-4">
-                <div class="w-10 h-10 rounded-xl bg-indigo-100/80 flex items-center justify-center text-indigo-600 shadow-sm">
-                    <i class="fa-solid fa-draw-polygon text-lg"></i>
+        <div class="flex gap-4 mb-4 mb-8">
+            <div class="flex-grow-[3] flex justify-between items-center bg-slate-50/80 backdrop-blur-sm p-5 rounded-2xl border border-slate-100/80 shadow-sm">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-100/80 flex items-center justify-center text-indigo-600 shadow-sm">
+                        <i class="fa-solid fa-draw-polygon text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-700">키포인트 시각화</h4>
+                        <p class="text-xs text-slate-500">AI가 분석한 관절 위치를 표시합니다.</p>
+                    </div>
                 </div>
-                <div>
-                     <h4 class="font-bold text-slate-700">키포인트 시각화</h4>
-                     <p class="text-xs text-slate-500">AI가 분석한 관절 위치를 표시합니다.</p>
-                </div>
+                <label class="toggle-switch cursor-pointer scale-110">
+                    <input type="checkbox" id="keypoint-toggle" class="sr-only peer">
+                    <div class="w-11 h-6 bg-slate-200/80 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gradient-to-r peer-checked:from-indigo-500 peer-checked:to-indigo-600 shadow-inner"></div>
+                </label>
             </div>
-            <label class="toggle-switch cursor-pointer scale-110">
-                <input type="checkbox" id="keypoint-toggle" class="sr-only peer">
-                <div class="w-11 h-6 bg-slate-200/80 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gradient-to-r peer-checked:from-indigo-500 peer-checked:to-indigo-600 shadow-inner"></div>
-            </label>
-        </div>
 
-        <!-- 메인화면으로 -->
-        <button onclick="goHome()" class="w-full py-4 bg-white border border-slate-200 text-slate-600 rounded-2xl font-bold hover:bg-slate-50 hover:text-slate-800 hover:border-slate-300 transition-all shadow-sm hover:shadow-md active:scale-[0.98]">
-            처음으로 돌아가기
-        </button>
+            <!-- 1단계로 -->
+            <button id="go_translation" class="flex-grow-[2] self-stretch flex items-center justify-center bg-white border border-slate-200 text-slate-600 rounded-2xl font-bold hover:bg-slate-50 hover:text-slate-800 hover:border-slate-300 transition-all shadow-sm hover:shadow-md active:scale-[0.98]">
+                다른 단어 검색
+            </button>
+        </div>
     </div>
 </section>
 

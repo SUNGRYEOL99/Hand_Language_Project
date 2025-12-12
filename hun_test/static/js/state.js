@@ -76,6 +76,7 @@ export const elements = {
     resultVideoPlayer: document.getElementById('result-video-player'),              // 결과 비디오
     resultVideoPlaceholder: document.getElementById('result-video-placeholder'),    // 결과 비디오 영역
     keypointToggle: document.getElementById('keypoint-toggle'),                     // 키포인트 토글 스위치
+    go_translation: document.getElementById('go_translation'),                      // 메인화면으로 가는 버튼
 
     // --- 사전 모듈 ---
     dictSearchInput: document.getElementById('dict-search-input'),
