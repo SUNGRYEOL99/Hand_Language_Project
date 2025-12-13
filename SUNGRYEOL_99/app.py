@@ -36,6 +36,7 @@ def create_app(config_object: Optional[object] = None) -> Flask:
         )
 
     # 4. Blueprint 등록
+
     _register_blueprints(app)
 
     logging.info("Flask application initialized.")
