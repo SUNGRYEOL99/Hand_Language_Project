@@ -16,6 +16,7 @@ def create_app(config_object: Optional[object] = None) -> Flask:
     앱 생성과 설정을 분리하여 테스트와 확장을 용이하게 합니다.
     """
     # 1. 로깅 설정
+
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
