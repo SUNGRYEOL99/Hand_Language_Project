@@ -52,6 +52,7 @@ def _register_blueprints(app: Flask):
 
 if __name__ == '__main__':
     # 로컬 개발 환경 실행
+
     app = create_app()
     logging.info("Starting Flask server...")
 
